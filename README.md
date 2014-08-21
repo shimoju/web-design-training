@@ -1,13 +1,101 @@
-# HTML5 minimal template
+# Webデザイン課題 第1回
+新サービスを紹介するティザーサイトを想定したウェブページのHTML素材をお配りします。
+これを先日配布した資料と下記の条件に従って、CSSでデザインしてください。
 
-ゼミのHTML・CSS講習会用に作成したテンプレートです。
+- 期限：5/28（水）まで
+- 提出方法：hiroshi.shimoju@gmail.com にメール送信
 
-[HTML5 Boilerplate](http://html5boilerplate.com/)をベースに、重要でないものは省いて最小限にしてあります。
 
-## License
+## 素材をダウンロードする
+HTML素材はここからダウンロードしてください。
 
-[HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate) : [Copyright (c) HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate/blob/master/LICENSE.md)
+https://github.com/shimoju/web-design-training/archive/ex1.zip
 
-[jQuery](https://github.com/jquery/jquery) : [Copyright 2014 jQuery Foundation and other contributors](https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt)
+- 展開すると「web-design-training-ex1」というフォルダができますが、これを自分の名前に変更してください。
+- 「index.html」が基本版HTML、「index-all.html」が発展版HTMLです。
+- 「css」フォルダ内の「main.css」が編集すべきCSSです。
+- 画像は「img」フォルダに入れます。
+- 提出はこのフォルダをzipで圧縮し、それをメールに添付してください。
 
-[Normalize.css](https://github.com/necolas/normalize.css) : [Copyright (c) Nicolas Gallagher and Jonathan Neal](https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
+
+## 基本版（index.html）
+まずは基本版「index.html」を開いてください。
+何もデザインされてない素のHTMLが表示されるので、cssフォルダの中にあるmain.cssをテキストエディタで開いて編集していきます。
+
+条件は以下の4つです。この条件に従えばその他は自由にデザインしてOKです。
+
+HTMLは必要があれば変更して構いません（デザイン用のdivを追加したりclassを足したりなど）
+
+### 1. 全体の横幅を960pxにする
+
+
+### 2. トップにメインビジュアルの画像を貼り付ける
+簡単な画像編集の練習もします。
+
+- 好きな画像（壁紙サイズがちょうどいい）を切り抜き・サイズ変更して960x540pxにする
+- 画像はimgフォルダに入れる
+- img要素ではなくCSSで背景画像として指定して、キャッチフレーズや「Zoomixをはじめる」リンクが画像の上にくるようにする
+
+### 3. 特徴3つを横並びで配置する
+メインビジュアルの下に特徴（div class="feature"）が3つありますが、これを横並びにしてください。
+
+960/3=1つあたりの幅は320pxとなります。これはなかなか難しいと思います。
+
+### 4. 色を3色使用する
+見本はモノクロの配色となっていますが、配色の練習のため色を3色（黒・白含む）使用してください。
+
+
+## 発展版（index-all.html）
+基本版ができた人は発展版「index-all.html」をやってみてください。
+基本でやった部分は既にデザインできているので、残りの部分をデザインしていきます。
+
+特に条件は指定しません。見本や事前課題で集めたサイトを参考にしてデザインしてください。
+
+時間があれば文章を変えて、自分が好きな何かを紹介する、というページにしてみてください。
+
+- ページ上下（ヘッダー、フッター）のデザイン
+- ナビゲーションのulリストをCSSで横並びにする
+- dlリストを使ったよくある質問の見た目をよくする
+- 3つの横並びボックスにも画像を貼り付ける
+- 「Zoomixをはじめる」のリンクをボタン型にデザインする
+
+など。
+
+
+## 完成見本
+発展版までやった完成見本は以下となります。
+
+https://db.tt/14GSyU6d
+
+
+## 注意事項
+### HTMLとCSSは必ず別ファイルに分ける
+配布したテンプレートに従って作れば問題はありません。
+
+### ブラウザはGoogle Chromeで
+通常はいくつかのブラウザで確認をしますが、今回は課題のため環境を統一したいので、Chromeのみを使用するものとします。
+
+
+## 補足
+### 開発者ツールを活用する
+ページ上で右クリックして「要素の検証」をクリックすると開発者ツールが表示されます。
+ちょっと慣れが必要ですが、覚えるとCSS編集が凄くしやすくなります。
+
+### わからなければとにかく検索。1年以内でぐぐれ
+HTML・CSSに限らずコンピュータ関係は変化が激しいので、普通に検索すると古い情報にあたってしまいがちです。
+
+知ってる人も多いと思いますが、検索ツール→期間指定なし→1年以内 で検索すると楽です。
+
+### 参考サイト
+タグやCSSの辞典は↓が便利です。
+
+- [HTML5リファレンス](http://www.htmq.com/html5/index.shtml)
+- [CSSリファレンス](http://www.htmq.com/style/index.shtml)
+
+
+## 連絡先
+質問等はサイボウズの掲示板にお願いします。個人的に連絡したい場合はメールかTwitterまで。
+
+hiroshi.shimoju@gmail.com
+
+https://twitter.com/hshimoju

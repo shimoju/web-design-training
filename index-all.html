@@ -2,51 +2,139 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <title>ここにタイトルを書きます</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML・CSS初級 課題</title>
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <!-- ページのヘッダー -->
+    <!--ページのヘッダー-->
     <header role="banner">
-      <h1>サイトタイトル</h1>
-    </header>
-    <!-- /ページのヘッダー -->
-
-    <!-- .wrap -->
-    <div class="wrap">
-      <!-- メインコンテンツ -->
-      <main role="main">
-        <section>
-          <h1>ページタイトル</h1>
-          <p>本文</p>
-        </section>
-      </main>
-      <!-- /メインコンテンツ -->
-
-      <!-- サブコンテンツ -->
-      <aside role="complementary">
+      <div class="container">
+        <!--ロゴ-->
+        <h1 class="brand">
+          <a href="#">Zoomix</a>
+        </h1>
+        <!--ナビゲーション-->
         <nav role="navigation">
-          <ul>
-            <li>ナビゲーション1</li>
-            <li>ナビゲーション2</li>
+          <ul class="main-nav">
+            <li>
+              <a href="#">ブログ</a>
+            </li>
+            <li>
+              <a href="#">Twitter</a>
+            </li>
+            <li>
+              <a href="#">Zoomixについて</a>
+            </li>
+            <li>
+              <a href="#">ヘルプ</a>
+            </li>
+            <li>
+              <a href="#">ログイン</a>
+            </li>
           </ul>
         </nav>
-      </aside>
-      <!-- /サブコンテンツ -->
-    </div>
-    <!-- /.wrap -->
+        <!--/ナビゲーション-->
+      </div>
+    </header>
+    <!--/ページのヘッダー-->
 
-    <!-- ページのフッター -->
+    <!--メインコンテンツ-->
+    <main role="main">
+      <section class="introduction">
+        <!--メインビジュアル-->
+        <div class="main-visual">
+          <div class="container">
+            <!--キャッチフレーズ-->
+            <h1>
+              さあ君も自堕落な世界へ
+            </h1>
+            <p>
+              Zoomixはネット上の動画をテレビ感覚で楽しめる<br>新しい動画サービスです。
+            </p>
+            <p>
+              <a class="btn" role="button" href="#">Zoomixをはじめる</a>
+            </p>
+          </div>
+        </div>
+        <!--/メインビジュアル-->
+
+        <!--特徴-->
+        <section class="features">
+          <div class="container">
+            <div class="feature">
+              <h2>
+                みんなの興味をズーム&ミックス
+              </h2>
+              <p>
+                あなたはテレビを見たり、音楽を聴きながら仕事や勉強をしたことはありませんか。そんな作業時に流せる動画や音楽を全てミックスしたあなただけの作業用ツールがZoomixなのです。
+              </p>
+            </div>
+            <div class="feature">
+              <h2>
+                24時間あなた専用チャンネル
+              </h2>
+              <p>
+                ZoomixはあなたのTwitterタイムラインに流れてきた動画を自動的に再生してくれます。つまり、Zoomixはあなたの身近な情報を凝縮した自分専用チャンネルなのです。
+              </p>
+            </div>
+            <div class="feature">
+              <h2>
+                テレビ感覚の簡単操作
+              </h2>
+              <p>
+                Zoomixには複雑な操作やわずらわしいインストールは必要ありません。再生も停止もワンクリックでOK。テレビと同様の感覚で気軽に楽しむことができます。
+              </p>
+            </div>
+          </div>
+        </section>
+        <!--/特徴-->
+      </section>
+
+      <!--よくある質問-->
+      <section class="faq">
+        <div class="container">
+          <h2>
+            よくある質問
+          </h2>
+          <!--質問や文章はだいたい3ゼミの塚越君が考えました-->
+          <dl class="faq-list">
+            <dt>
+              Zoomixを視聴するのに必要なものは何ですか？
+            </dt>
+            <dd>
+              お手持ちのパソコンとTwitterアカウントがあれば誰でも視聴可能です。
+            </dd>
+            <dt>
+              Zoomixの名前の由来を教えて下さい。動物園のミックス？意味が分かりません。
+            </dt>
+            <dd>
+              「Zoomix」とは「Zoom」と「Mix」を足した造語です。身の回りの人たちの興味に注目し（Zoom）、それをひとまとめにして（Mix）視聴する、新たなメディアコミュニケーションの形を言い表しています。動物園とは関係ありません。
+            </dd>
+            <dt>
+              気に入らない動画や不快な動画が流れてきたのですがどうしてくれるのでしょうか。
+            </dt>
+            <dd>
+              プレイヤー画面にその動画をつぶやいた人とツイートの内容が表示されますので、恐縮ですがその動画を貼り付けた人に自分で文句を言うなどして個人個人での対応をお願いします。
+            </dd>
+            <dt>
+              誰も動画をつぶやかないのでZoomixを見ることができません。
+            </dt>
+            <dd>
+              もっといっぱいフォローすれｗｗｗ
+            </dd>
+          </dl>
+        </div>
+      </section>
+      <!--/よくある質問-->
+    </main>
+    <!--/メインコンテンツ-->
+
+    <!--ページのフッター-->
     <footer role="contentinfo">
-      <small>&copy; フッターテキスト</small>
+      <div class="container">
+        <small>&copy; Hiroshi Shimoju</small>
+      </div>
     </footer>
-    <!-- /ページのフッター -->
-
-    <!-- JavaScript -->
-    <script src="//cdn.jsdelivr.net/jquery/2.1.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.1.min.js"><\/script>')</script>
-    <script src="js/main.js"></script>
-    <!-- /JavaScript -->
+    <!--/ページのフッター-->
   </body>
 </html>
