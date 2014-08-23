@@ -16,7 +16,11 @@ class App < Sinatra::Base
   end
 
   get '/' do
-    erb :index
+    if session[:user]
+      erb :home
+    else
+      erb :index
+    end
   end
 
   get '/auth/:provider/callback' do
