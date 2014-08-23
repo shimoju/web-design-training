@@ -20,6 +20,14 @@ class App < Sinatra::Base
   end
 
   get '/auth/:provider/callback' do
+    auth = request.env['omniauth.auth']
+    session[:user] = {
+      name: auth.info.name,
+      username: auth.info.nickname,
+      image: auth.info.image,
+      token: auth.credentials.token,
+      secret: auth.credentials.secret
+    }
     redirect to('/')
   end
 end
