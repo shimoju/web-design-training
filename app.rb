@@ -18,4 +18,8 @@ class App < Sinatra::Base
   get '/' do
     erb :index
   end
+
+  get '/auth/:provider/callback' do
+    redirect to('/')
+  end
 end
