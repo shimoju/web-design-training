@@ -34,4 +34,9 @@ class App < Sinatra::Base
     }
     redirect to('/')
   end
+
+  get '/logout' do
+    session[:user] = nil
+    redirect to('/')
+  end
 end
