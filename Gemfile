@@ -5,3 +5,4 @@ gem 'sinatra-contrib'
 
 gem 'foreman'
 gem 'omniauth-twitter'
+gem 'twitter'
