@@ -5,3 +5,9 @@
   <dd><%= value %></dd>
 <% end %>
 </dl>
+<dl>
+<% @tweets.each do |t| %>
+  <dt><%= t.user.name %></dt>
+  <dd><%= t.text %></dd>
+<% end %>
+</dl>
