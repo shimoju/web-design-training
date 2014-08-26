@@ -7,8 +7,12 @@ class App < Sinatra::Base
   configure do
     enable :sessions
 
+    twitter_api_key = ENV['TWITTER_API_KEY']
+    twitter_api_secret = ENV['TWITTER_API_SECRET']
+    set twitter_api_key: twitter_api_key, twitter_api_secret: twitter_api_secret
+
     use OmniAuth::Builder do
-      provider :twitter, ENV['TWITTER_API_KEY'], ENV['TWITTER_API_SECRET']
+      provider :twitter, twitter_api_key, twitter_api_secret
     end
   end
 
@@ -19,8 +23,8 @@ class App < Sinatra::Base
   helpers do
     def create_twitter_client
       Twitter::REST::Client.new do |config|
-        config.consumer_key = ENV['TWITTER_API_KEY']
-        config.consumer_secret = ENV['TWITTER_API_SECRET']
+        config.consumer_key = settings.twitter_api_key
+        config.consumer_secret = settings.twitter_api_secret
         config.access_token = session[:user][:token]
         config.access_token_secret = session[:user][:secret]
       end
