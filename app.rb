@@ -29,12 +29,32 @@ class App < Sinatra::Base
         config.access_token_secret = session[:user][:secret]
       end
     end
+
+    def save_cache(object)
+      Dir.mkdir('tmp') unless Dir.exist?('tmp')
+      File.open('tmp/cache', 'wb') do |f|
+        f.write(Marshal.dump(object))
+      end
+    end
+    def load_cache
+      return nil unless File.exist?('tmp/cache')
+      Marshal.load(File.binread('tmp/cache'))
+    end
+    def delete_cache
+      File.delete('tmp/cache') if File.exist?('tmp/cache')
+    end
   end
 
   get '/' do
     if session[:user]
-      twitter = create_twitter_client
-      @tweets = twitter.home_timeline
+      cache = load_cache
+      if cache
+        @tweets = cache
+      else
+        twitter = create_twitter_client
+        @tweets = twitter.home_timeline
+        save_cache(@tweets)
+      end
       erb :home
     else
       erb :index
@@ -55,6 +75,7 @@ class App < Sinatra::Base
 
   get '/logout' do
     session[:user] = nil
+    delete_cache
     redirect to('/')
   end
 end
