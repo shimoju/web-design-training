@@ -74,6 +74,7 @@ class App < Sinatra::Base
       token: auth.credentials.token,
       secret: auth.credentials.secret
     }
+    SimpleCache.delete
     redirect to('/')
   end
 
