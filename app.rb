@@ -50,7 +50,9 @@ class App < Sinatra::Base
   end
 
   get '/' do
-    if session[:user]
+    unless session[:user]
+      erb :index
+    else
       cache = SimpleCache.load
       if cache
         @tweets = cache
@@ -60,8 +62,6 @@ class App < Sinatra::Base
         SimpleCache.save(@tweets)
       end
       erb :home
-    else
-      erb :index
     end
   end
 
