@@ -3,6 +3,24 @@ require 'sinatra/reloader'
 require 'omniauth-twitter'
 require 'twitter'
 
+class SimpleCache
+  def self.save(object)
+    Dir.mkdir('tmp') unless Dir.exist?('tmp')
+    File.open('tmp/cache', 'wb') do |f|
+      f.write(Marshal.dump(object))
+    end
+  end
+
+  def self.load
+    return nil unless File.exist?('tmp/cache')
+    Marshal.load(File.binread('tmp/cache'))
+  end
+
+  def self.delete
+    File.delete('tmp/cache') if File.exist?('tmp/cache')
+  end
+end
+
 class App < Sinatra::Base
   configure do
     enable :sessions
@@ -29,31 +47,17 @@ class App < Sinatra::Base
         config.access_token_secret = session[:user][:secret]
       end
     end
-
-    def save_cache(object)
-      Dir.mkdir('tmp') unless Dir.exist?('tmp')
-      File.open('tmp/cache', 'wb') do |f|
-        f.write(Marshal.dump(object))
-      end
-    end
-    def load_cache
-      return nil unless File.exist?('tmp/cache')
-      Marshal.load(File.binread('tmp/cache'))
-    end
-    def delete_cache
-      File.delete('tmp/cache') if File.exist?('tmp/cache')
-    end
   end
 
   get '/' do
     if session[:user]
-      cache = load_cache
+      cache = SimpleCache.load
       if cache
         @tweets = cache
       else
         twitter = create_twitter_client
         @tweets = twitter.home_timeline
-        save_cache(@tweets)
+        SimpleCache.save(@tweets)
       end
       erb :home
     else
@@ -75,7 +79,7 @@ class App < Sinatra::Base
 
   get '/logout' do
     session[:user] = nil
-    delete_cache
+    SimpleCache.delete
     redirect to('/')
   end
 end
