@@ -1,7 +1,5 @@
-require 'sinatra/base'
-require 'sinatra/reloader'
-require 'omniauth-twitter'
-require 'twitter'
+require 'bundler/setup'
+Bundler.require(:default, ENV['RACK_ENV'] || :development)
 
 class SimpleCache
   def self.save(object)
@@ -35,6 +33,7 @@ class App < Sinatra::Base
   end
 
   configure :development do
+    require 'sinatra/reloader'
     register Sinatra::Reloader
   end
 
