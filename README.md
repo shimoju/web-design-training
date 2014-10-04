@@ -65,7 +65,7 @@ HTMLは必要があれば変更して構いません（デザイン用のdivを�
 ## 完成見本
 発展版までやった完成見本は以下となります。
 
-https://db.tt/14GSyU6d
+https://github.com/shimoju/web-design-training/archive/ex1-sample.zip
 
 
 ## 注意事項
