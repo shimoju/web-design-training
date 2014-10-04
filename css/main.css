@@ -7,7 +7,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 /* ここにCSSを書きます */
 /* 例 */
 body {
-  background: #fff;
+  background-color: #fff;
   color: #222;
   font-family: sans-serif;
   font-size: 1em;
