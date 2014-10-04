@@ -1,6 +1,6 @@
 # HTML5 minimal template
 
-ゼミのHTML・CSS講習会用に作成したテンプレートです。
+ゼミのHTML・CSS課題用に作成したテンプレートです。
 
 [HTML5 Boilerplate](http://html5boilerplate.com/)をベースに、重要でないものは省いて最小限にしてあります。
 
