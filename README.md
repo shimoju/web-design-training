@@ -59,10 +59,10 @@ jQueryは使用率が高いので、広く使っていいですよと公開し�
 自分でいちいちjQueryをダウンロードして配置する必要がないので、CDNはよく利用されています。
 
 ```html
-<!-- jsDelivrが提供するCDNから読み込む -->
-<script src="https://cdn.jsdelivr.net/jquery/2.1.1/jquery.min.js"></script>
 <!-- Googleが提供するCDNから読み込む -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- jsDelivrが提供するCDNから読み込む -->
+<script src="http://cdn.jsdelivr.net/jquery/2.1.1/jquery.min.js"></script>
 ```
 
 テンプレートでは既にCDNからjQueryを読み込むようにしているので、詳しくはテンプレートを見てください。
@@ -132,7 +132,7 @@ index.htmlを開き、Nivo Lightboxを読み込みます。
 <link rel="stylesheet" href="css/main.css">
 <!-- JavaScript -->
 <!-- jQuery (CDNから読み込み) -->
-<script src="https://cdn.jsdelivr.net/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <!-- jQueryライブラリはここ -->
 
 <!-- Nivo Lightbox JavaScript を読み込む -->
