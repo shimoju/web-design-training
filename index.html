@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>HTML・CSS初級 課題</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
+    <!--ページのヘッダー-->
+    <header role="banner">
+      <div class="container">
+        <!--ロゴ-->
+        <h1 class="brand">
+          <a href="#">Zoomix</a>
+        </h1>
+        <!--ナビゲーション-->
+        <nav role="navigation">
+          <ul class="main-nav">
+            <li>
+              <a href="#">ブログ</a>
+            </li>
+            <li>
+              <a href="#">Twitter</a>
+            </li>
+            <li>
+              <a href="#">Zoomixについて</a>
+            </li>
+            <li>
+              <a href="#">ヘルプ</a>
+            </li>
+            <li>
+              <a href="#">ログイン</a>
+            </li>
+          </ul>
+        </nav>
+        <!--/ナビゲーション-->
+      </div>
+    </header>
+    <!--/ページのヘッダー-->
+
     <!--メインコンテンツ-->
     <main role="main">
       <section class="introduction">
@@ -17,7 +50,7 @@
               さあ君も自堕落な世界へ
             </h1>
             <p>
-              Zoomixはネット上の動画をテレビ感覚で楽しめる<br>新しい動画サービスです。
+              Zoomixはネット上の動画をテレビ感覚で楽しめる<br />新しい動画サービスです。
             </p>
             <p>
               <a class="btn" role="button" href="#">Zoomixをはじめる</a>
@@ -57,7 +90,52 @@
         </section>
         <!--/特徴-->
       </section>
+
+      <!--よくある質問-->
+      <section class="faq">
+        <div class="container">
+          <h2>
+            よくある質問
+          </h2>
+          <!--質問や文章はだいたい3ゼミの塚越君が考えました-->
+          <dl class="faq-list">
+            <dt>
+              Zoomixを視聴するのに必要なものは何ですか？
+            </dt>
+            <dd>
+              お手持ちのパソコンとTwitterアカウントがあれば誰でも視聴可能です。
+            </dd>
+            <dt>
+              Zoomixの名前の由来を教えて下さい。動物園のミックス？意味が分かりません。
+            </dt>
+            <dd>
+              「Zoomix」とは「Zoom」と「Mix」を足した造語です。身の回りの人たちの興味に注目し（Zoom）、それをひとまとめにして（Mix）視聴する、新たなメディアコミュニケーションの形を言い表しています。動物園とは関係ありません。
+            </dd>
+            <dt>
+              気に入らない動画や不快な動画が流れてきたのですがどうしてくれるのでしょうか。
+            </dt>
+            <dd>
+              プレイヤー画面にその動画をつぶやいた人とツイートの内容が表示されますので、恐縮ですがその動画を貼り付けた人に自分で文句を言うなどして個人個人での対応をお願いします。
+            </dd>
+            <dt>
+              誰も動画をつぶやかないのでZoomixを見ることができません。
+            </dt>
+            <dd>
+              もっといっぱいフォローすれｗｗｗ
+            </dd>
+          </dl>
+        </div>
+      </section>
+      <!--/よくある質問-->
     </main>
     <!--/メインコンテンツ-->
+
+    <!--ページのフッター-->
+    <footer role="contentinfo">
+      <div class="container">
+        <small>&copy; Hiroshi Shimoju</small>
+      </div>
+    </footer>
+    <!--/ページのフッター-->
   </body>
 </html>
