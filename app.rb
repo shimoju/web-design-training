@@ -1,24 +1,6 @@
 require 'bundler/setup'
 Bundler.require(:default, ENV['RACK_ENV'] || :development)
 
-class SimpleCache
-  def self.save(object)
-    Dir.mkdir('tmp') unless Dir.exist?('tmp')
-    File.open('tmp/cache', 'wb') do |f|
-      f.write(Marshal.dump(object))
-    end
-  end
-
-  def self.load
-    return nil unless File.exist?('tmp/cache')
-    Marshal.load(File.binread('tmp/cache'))
-  end
-
-  def self.delete
-    File.delete('tmp/cache') if File.exist?('tmp/cache')
-  end
-end
-
 class App < Sinatra::Base
   configure do
     enable :sessions
@@ -81,5 +63,23 @@ class App < Sinatra::Base
     session[:user] = nil
     SimpleCache.delete
     redirect to('/')
+  end
+end
+
+class SimpleCache
+  def self.save(object)
+    Dir.mkdir('tmp') unless Dir.exist?('tmp')
+    File.open('tmp/cache', 'wb') do |f|
+      f.write(Marshal.dump(object))
+    end
+  end
+
+  def self.load
+    return nil unless File.exist?('tmp/cache')
+    Marshal.load(File.binread('tmp/cache'))
+  end
+
+  def self.delete
+    File.delete('tmp/cache') if File.exist?('tmp/cache')
   end
 end
