@@ -22,6 +22,10 @@ class App < Sinatra::Base
   end
 
   helpers do
+    def signed_in?
+      session[:user] ? true : false
+    end
+
     def create_twitter_client
       Twitter::REST::Client.new do |config|
         config.consumer_key = settings.twitter_api_key
@@ -33,9 +37,7 @@ class App < Sinatra::Base
   end
 
   get '/' do
-    unless session[:user]
-      erb :index
-    else
+    if signed_in?
       cache = SimpleCache.load
       if cache
         @tweets = cache
@@ -45,6 +47,8 @@ class App < Sinatra::Base
         SimpleCache.save(@tweets)
       end
       erb :home
+    else
+      erb :index
     end
   end
 
