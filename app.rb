@@ -52,6 +52,23 @@ class App < Sinatra::Base
     end
   end
 
+  get '/favorites' do
+    redirect to('/') unless signed_in?
+    cache = SimpleCache.load('favorites')
+    if cache
+      @favorites = cache
+    else
+      twitter = create_twitter_client
+      follows = twitter.friend_ids.to_a
+      target = follows.sample(15)
+      @favorites = target.map do |user_id|
+        { user: twitter.user(user_id), favorites: twitter.favorites(user_id) }
+      end
+      SimpleCache.save(@favorites, 'favorites')
+    end
+    erb :favorites
+  end
+
   get '/auth/:provider/callback' do
     auth = request.env['omniauth.auth']
     session[:user] = {
