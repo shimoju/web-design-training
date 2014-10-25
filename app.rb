@@ -38,13 +38,13 @@ class App < Sinatra::Base
 
   get '/' do
     if signed_in?
-      cache = SimpleCache.load
+      cache = SimpleCache.load('timeline')
       if cache
         @tweets = cache
       else
         twitter = create_twitter_client
         @tweets = twitter.home_timeline
-        SimpleCache.save(@tweets)
+        SimpleCache.save(@tweets, 'timeline')
       end
       erb :home
     else
@@ -61,31 +61,44 @@ class App < Sinatra::Base
       token: auth.credentials.token,
       secret: auth.credentials.secret
     }
-    SimpleCache.delete
+    SimpleCache.delete_all
     redirect to('/')
   end
 
   get '/logout' do
     session[:user] = nil
-    SimpleCache.delete
+    SimpleCache.delete_all
     redirect to('/')
   end
 end
 
 class SimpleCache
-  def self.save(object)
-    Dir.mkdir('tmp') unless Dir.exist?('tmp')
-    File.open('tmp/cache', 'wb') do |f|
+  CACHE_PATH_BASE = 'tmp/cache'
+
+  def self.save(object, name)
+    FileUtils.mkdir_p(CACHE_PATH_BASE) unless Dir.exist?(CACHE_PATH_BASE)
+    File.open(cache_path(name), 'wb') do |f|
       f.write(Marshal.dump(object))
     end
   end
 
-  def self.load
-    return nil unless File.exist?('tmp/cache')
-    Marshal.load(File.binread('tmp/cache'))
+  def self.load(name)
+    file = cache_path(name)
+    return nil unless File.exist?(file)
+    Marshal.load(File.binread(file))
   end
 
-  def self.delete
-    File.delete('tmp/cache') if File.exist?('tmp/cache')
+  def self.delete(name)
+    file = cache_path(name)
+    File.delete(file) if File.exist?(file)
+  end
+
+  def self.delete_all
+    FileUtils.rm_rf(CACHE_PATH_BASE)
+  end
+
+  private
+  def self.cache_path(name)
+    File.join(CACHE_PATH_BASE, name)
   end
 end
