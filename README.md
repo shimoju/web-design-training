@@ -51,3 +51,18 @@ http://127.0.0.1/auth/twitter/callback
 「Consumer Key (API Key)」と「Consumer Secret (API Secret)」を確認します。
 
 これが認証に使うキー(≒IDとパスワード)です。これを後で使います。
+
+
+## Rubyについて
+今回はTwitterアプリを作るのに
+[Ruby](https://www.ruby-lang.org/ja/)というプログラミング言語を使います。
+
+Rubyは様々な用途に使えるプログラミング言語ですが、現在は特にWebアプリを作るのによく使われています。
+代表例はクックパッド、食べログ、SoundCloud、初期のTwitter(今は別の言語)、GitHubなどです。
+
+Webアプリでよく使われている言語には他にPHPもあります。
+この言語で作られているアプリはブログソフトの[WordPress](https://ja.wordpress.org/)や、
+Wikipediaで使われている[MediaWiki](http://www.mediawiki.org/wiki/MediaWiki/ja)など数多くあります。
+
+ユーザーも一番多いのでできればPHPにしたいところですが、
+自分がPHPを使えないので今回はRubyにしました。次回の課題はPHPにする予定です。
