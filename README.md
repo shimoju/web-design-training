@@ -66,3 +66,45 @@ Wikipediaで使われている[MediaWiki](http://www.mediawiki.org/wiki/MediaWik
 
 ユーザーも一番多いのでできればPHPにしたいところですが、
 自分がPHPを使えないので今回はRubyにしました。次回の課題はPHPにする予定です。
+
+
+## Rubyをインストールする
+ではRubyをインストールし、使えるようにします。
+ここで時間を食うのは無駄なので、エラーが出たときは連絡してください。
+
+### Windowsの場合
+[RubyInstaller](http://rubyinstaller.org/downloads/)から、
+一番上にある最新版(10月現在では「Ruby 2.1.3」)をダウンロードしてください。
+
+インストール手順は[このページ](http://www.ruby.or.jp/ja/tech/install/ruby/install_win.html)を見てください。
+ここではバージョン1.9.3で説明されていますが、2.1.3でも同じです。
+
+終わったら、すべてのプログラム→アクセサリ(Windows 8ならスタートボタンを右クリック)
+からコマンド プロンプトを開いて、
+
+```
+ruby -v
+```
+
+と入力してEnterを押し、`ruby 2.1.3p242`と出ればOKです。
+
+### Macの場合
+まず、[Mac App StoreからXcodeをインストール](https://itunes.apple.com/jp/app/xcode/id497799835?mt=12)
+してください。
+(App Storeがない古いMacで、Xcodeも入っていない場合は相談してください)
+
+次に、アプリケーション→ユーティリティ にある、ターミナルを開いて、
+
+```
+curl https://gist.githubusercontent.com/shimoju/74947a3e306256785271/raw/install-ruby.sh | bash
+```
+
+と入力してEnterを押し、指示に従いパスワードを入力してしばらく待ちます。
+
+終わったら、
+
+```
+ruby -v
+```
+
+を実行し、`ruby 2.1.3p242`と出ればOKです。
