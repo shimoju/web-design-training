@@ -6,6 +6,7 @@ class App < Sinatra::Base
   configure do
     enable :sessions
 
+    # ここを変更する
     twitter_api_key = ENV['TWITTER_API_KEY']
     twitter_api_secret = ENV['TWITTER_API_SECRET']
     set twitter_api_key: twitter_api_key, twitter_api_secret: twitter_api_secret

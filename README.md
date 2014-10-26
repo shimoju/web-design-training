@@ -120,3 +120,76 @@ ruby -v
 ```
 
 を実行し、`ruby 2.1.3p242`と出ればOKです。
+
+
+## 課題をセットアップする
+課題はここからダウンロードします。
+
+https://github.com/shimoju/web-design-training/archive/ex3.zip
+
+展開したら、ターミナル(Windowsはコマンドプロンプト、以下同様)を開き、そのフォルダに移動します。
+
+デスクトップに展開した場合、
+
+```
+cd Desktop/web-design-training-ex3
+```
+
+となります。
+
+### 必要なライブラリをインストールする
+Bundlerというツールを使って必要なものをインストールします。
+まずBundler自体をインストールします。
+
+```
+gem install bundler
+```
+
+次に
+
+```
+bundle install
+```
+
+を実行します。少し時間がかかります。
+
+### APIキーを設定する
+先ほど作成したTwitterアプリの「Keys and Access Tokens」にアクセスし、
+Consumer Key (API Key)、Consumer Secret (API Secret)をコピーします。
+
+課題の`app.rb`を開いて、10、11行目に貼り付けます。
+
+プログラミング入門などでやったと思いますが、「文字列」なのでクォーテーション（''または""）で囲みます。
+以下のようになればOKです。
+
+```ruby
+# ここを変更する
+twitter_api_key = 'JPuJ4TVLR9FNu6FLpq9HwxQsO'
+twitter_api_secret = 'zhr7GLhj79yqup5x09u3oouF9ZLAzJSsXrmS7uDnLTjvcqNEfl'
+```
+
+### アプリを起動する
+```
+foreman start
+```
+
+を実行するとアプリが立ち上がります。
+
+ブラウザで「[http://localhost:5000/](http://localhost:5000/)」にアクセスして、
+「ログイン」と表示されていれば成功です。
+
+「ログイン」を押してTwitterに飛び、「連携アプリを認証」すると自分のタイムラインが表示されます。
+ここでエラーが出るならAPIキーの設定にミスがあるので確認してください。
+
+アプリを終了するにはターミナルで`Ctrl+C`を押します。
+
+
+## 課題
+上の準備作業をするのは初回だけです。以降は
+
+1. ターミナルを開く
+2. `cd`で課題のフォルダに移動
+3. `foreman start`を実行してアプリを起動
+4. [http://localhost:5000/](http://localhost:5000/)」にアクセス
+
+すればアプリが動きます。
