@@ -1,9 +1,10 @@
 <a href="/logout">ログアウト</a>
 <a href="/favorites">フォローしている人のお気に入り</a>
 
-<dl>
-  <% @tweets.each do |t| %>
-    <dt><%= "#{t.user.name} @#{t.user.screen_name}" %></dt>
-    <dd><%= t.text %></dd>
-  <% end %>
-</dl>
+<% @tweets.each do |t| %>
+  <blockquote class="twitter-tweet">
+    <%= "#{t.user.name} @#{t.user.screen_name}" %>
+    <a href="<%= t.url %>"><%= t.created_at %></a>
+    <p><%= t.text %></p>
+  </blockquote>
+<% end %>

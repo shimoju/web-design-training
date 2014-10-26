@@ -1,12 +1,13 @@
 <a href="/logout">ログアウト</a>
 <a href="/">タイムライン</a>
 
-<dl>
-  <% @favorites.each do |t| %>
-    <h2><%= "#{t[:user].name} @#{t[:user].screen_name}" %> がお気に入り</h2>
-    <% t[:favorites].each do |fav| %>
-      <dt><%= "#{fav.user.name} @#{fav.user.screen_name}" %></dt>
-      <dd><%= fav.text %></dd>
-    <% end %>
+<% @favorites.each do |t| %>
+  <h2><%= "#{t[:user].name} @#{t[:user].screen_name}" %> がお気に入りに登録</h2>
+  <% t[:favorites].each do |fav| %>
+    <blockquote class="twitter-tweet">
+      <%= "#{fav.user.name} @#{fav.user.screen_name}" %>
+      <a href="<%= fav.url %>"><%= fav.created_at %></a>
+      <p><%= fav.text %></p>
+    </blockquote>
   <% end %>
-</dl>
+<% end %>
