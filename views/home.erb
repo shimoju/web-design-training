@@ -2,14 +2,8 @@
 <a href="/favorites">フォローしている人のお気に入り</a>
 
 <dl>
-<% session[:user].each do |key, value| %>
-  <dt><%= key %></dt>
-  <dd><%= value %></dd>
-<% end %>
-</dl>
-<dl>
-<% @tweets.each do |t| %>
-  <dt><%= t.user.name %></dt>
-  <dd><%= t.text %></dd>
-<% end %>
+  <% @tweets.each do |t| %>
+    <dt><%= t.user.name %></dt>
+    <dd><%= t.text %></dd>
+  <% end %>
 </dl>
