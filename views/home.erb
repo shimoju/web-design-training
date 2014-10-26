@@ -3,7 +3,7 @@
 
 <dl>
   <% @tweets.each do |t| %>
-    <dt><%= t.user.name %></dt>
+    <dt><%= "#{t.user.name} @#{t.user.screen_name}" %></dt>
     <dd><%= t.text %></dd>
   <% end %>
 </dl>
