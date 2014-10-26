@@ -193,3 +193,14 @@ foreman start
 4. [http://localhost:5000/](http://localhost:5000/)」にアクセス
 
 すればアプリが動きます。
+
+課題の本題は以下です。
+
+### 1. Twitterウィジェットを導入する
+(TODO)
+
+### 2. デザインする(やりたい人は)
+(TODO)
+
+## 提出方法
+(TODO)
