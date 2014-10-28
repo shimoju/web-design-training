@@ -85,20 +85,9 @@ Wikipediaで使われている[MediaWiki](http://www.mediawiki.org/wiki/MediaWik
 ここで時間を食うのは無駄なので、エラーが出たときは連絡してください。
 
 ### Windowsの場合
-[RubyInstaller](http://rubyinstaller.org/downloads/)から、
-一番上にある最新版(10月現在では「Ruby 2.1.3」)をダウンロードしてください。
+インストール手順は以下の記事に書いたので、こちらを参照してください。
 
-インストール手順は[このページ](http://www.ruby.or.jp/ja/tech/install/ruby/install_win.html)を見てください。
-ここではバージョン1.9.3で説明されていますが、2.1.3でも同じです。
-
-終わったら、すべてのプログラム→アクセサリ(Windows 8ならスタートボタンを右クリック)
-からコマンド プロンプトを開いて、
-
-```
-ruby -v
-```
-
-と入力してEnterを押し、`ruby 2.1.3p242`と出ればOKです。
+http://qiita.com/shimoju/items/41035b213ad0ac3a979e
 
 ### Macの場合
 まず、[Mac App StoreからXcodeをインストール](https://itunes.apple.com/jp/app/xcode/id497799835?mt=12)
