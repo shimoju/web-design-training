@@ -108,7 +108,8 @@ curl https://gist.githubusercontent.com/shimoju/74947a3e306256785271/raw/install
 ruby -v
 ```
 
-を実行し、`ruby 2.1.3p242`と出ればOKです。
+を実行し、`ruby 2.1.4p265`と出ればOKです。
+(その時々の最新版なので、これより新しければ問題ありません)
 
 
 ## 課題をセットアップする
