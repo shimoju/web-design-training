@@ -100,7 +100,8 @@ http://qiita.com/shimoju/items/41035b213ad0ac3a979e
 curl https://gist.githubusercontent.com/shimoju/74947a3e306256785271/raw/install-ruby.sh | bash
 ```
 
-と入力してEnterを押し、指示に従いパスワードを入力してしばらく待ちます。
+と入力してEnterを押し、指示に従いパスワードを入力してしばらく待ちます。[(スクリプトの内容)](https://gist.github.com/shimoju/74947a3e306256785271)
+
 
 終わったら、
 
