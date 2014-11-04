@@ -184,7 +184,7 @@ Windowsでは「バッチ ジョブを終了しますか (Y/N)?」と聞かれ�
 1. ターミナルを開く
 2. `cd`で課題のフォルダに移動
 3. `foreman start`を実行してアプリを起動
-4. [http://localhost:5000/](http://localhost:5000/)」にアクセス
+4. [http://localhost:5000/](http://localhost:5000/) にアクセス
 
 すればアプリが動きます。
 
