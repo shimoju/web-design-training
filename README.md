@@ -191,7 +191,32 @@ Windowsでは「バッチ ジョブを終了しますか (Y/N)?」と聞かれ�
 課題の本題は以下です。
 
 ### 1. Twitterウィジェットを導入する
-(TODO)
+ページ内にツイートボタンやTwitterのタイムラインを表示しているサイトはよくありますが、
+これはTwitterウィジェットを使用しています。
+
+- [埋め込みタイムライン](https://dev.twitter.com/ja/web/embedded-timelines)
+- [埋め込みツイート](https://dev.twitter.com/ja/web/embedded-tweets)
+
+ウィジェットを使用するために必要なJavaScriptが`widgets.js`で、以下のようにして読み込みます。
+
+```html
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+```
+
+`views/layout.erb`にこれを追加すれば、ツイートが綺麗にデザインされて表示されます。
+
+```html
+<head>
+  <meta charset="utf-8">
+  <title>Webデザイン課題 第3回</title>
+  <link rel="stylesheet" href="css/main.css">
+  <!-- JavaScript -->
+  <!-- asyncがついているので一番上に追加 -->
+  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+</head>
+```
 
 ### 2. デザインする(やりたい人は)
 (TODO)
