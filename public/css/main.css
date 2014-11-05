@@ -16,3 +16,7 @@ body {
   margin: 20px auto;
   width: 60%;
 }
+
+.twitter-tweet {
+  width: 100% !important;
+}
