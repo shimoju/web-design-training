@@ -150,7 +150,9 @@ bundle install
 先ほど作成したTwitterアプリの「Keys and Access Tokens」にアクセスし、
 Consumer Key (API Key)、Consumer Secret (API Secret)をコピーします。
 
-課題の`app.rb`を開いて、10、11行目に貼り付けます。
+課題の`app.rb`をテキストエディタで開いて、10、11行目に貼り付けます。
+(Windowsの場合、「メモ帳」で開くと改行が反映されずうまくいかないので、
+Sublime Textなどのプログラミング用テキストエディタで開いてください)
 
 プログラミング入門などでやったと思いますが、「文字列」なのでクォーテーション（`'`または`"`）で囲みます。
 以下のようになればOKです。
