@@ -17,6 +17,8 @@ class App < Sinatra::Base
   end
 
   configure :development do
+    # SSLエラー回避: SSL証明書が見つからない場合、別途用意した証明書を使用する
+    ENV['SSL_CERT_FILE'] = File.expand_path('ca-bundle.crt') unless File.exist?(OpenSSL::X509::DEFAULT_CERT_FILE)
     set :session_secret, 'b2df5a814269e76c41714ff203bede4724e52892c066a8f3f90310d6047d9b1e2903beb49f45c10c70dd1c5c517b54779ef9a0b940a55e6f33e97d1ea3340a1f'
     require 'sinatra/reloader'
     register Sinatra::Reloader
