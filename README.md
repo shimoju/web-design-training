@@ -243,4 +243,4 @@ HTML・CSSに限らずコンピュータ関係は変化が激しいので、普�
 
 hiroshi.shimoju@gmail.com
 
-https://twitter.com/hshimoju
+https://twitter.com/shimoju_
