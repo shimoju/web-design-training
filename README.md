@@ -60,9 +60,9 @@ jQueryは使用率が高いので、広く使っていいですよと公開し�
 
 ```html
 <!-- Googleが提供するCDNから読み込む -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <!-- jsDelivrが提供するCDNから読み込む -->
-<script src="http://cdn.jsdelivr.net/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script>
 ```
 
 テンプレートでは既にCDNからjQueryを読み込むようにしているので、詳しくはテンプレートを見てください。
@@ -132,7 +132,7 @@ index.htmlを開き、Nivo Lightboxを読み込みます。
 <link rel="stylesheet" href="css/main.css">
 <!-- JavaScript -->
 <!-- jQuery (CDNから読み込み) -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <!-- jQueryライブラリはここ -->
 
 <!-- Nivo Lightbox JavaScript を読み込む -->
@@ -185,20 +185,20 @@ $(function() {
 スライダープラグインのマニュアルには
 
 ```html
-<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/jquery.min.js"></script>
 ```
 
 などとjQueryを入れるように書かれていますが、
 課題では既にjQueryを読み込んでいるのでここはやる必要はありません。
 
-jQueryはほとんどの場合`jquery.min.js`(または`jquery-2.1.1.min.js`など間にバージョンが入る)
+jQueryはほとんどの場合`jquery.min.js`(または`jquery-2.1.4.min.js`など間にバージョンが入る)
 というファイル名なので、それが2個以上ないようにしてください。
 
 今回の課題では既に書かれている、以下の1つだけあればOKということです。
 
 ```html
 <!-- jQuery (CDNから読み込み) -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 ```
 
 ### 5. デザインする
